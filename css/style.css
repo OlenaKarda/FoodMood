@@ -745,12 +745,12 @@ h6 {
 }
 
 .body-discount__title {
-  line-height: 1.4909090909;
+  line-height: 149.090909%;
+  /* 82/55 */
   font-weight: 700;
 }
 
 .body-discount__text {
-  font-size: 1.625rem;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -933,6 +933,10 @@ h6 {
     padding-bottom: 2rem;
   }
 
+  .body-discount__text {
+    font-size: 1.625rem;
+  }
+
   .body-discount__text:not(:last-child) {
     padding-bottom: 4.5625rem;
   }
@@ -1076,11 +1080,15 @@ h6 {
   }
 
   .body-discount__title {
-    font-size: 2.1875rem;
+    font-size: 1.875rem;
   }
 
   .body-discount__title:not(:last-child) {
     padding-bottom: 0.9375rem;
+  }
+
+  .body-discount__text {
+    font-size: 1.25rem;
   }
 
   .body-discount__text:not(:last-child) {
@@ -1289,6 +1297,16 @@ h6 {
   .footer__main {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
+  }
+
+  .body-discount__apps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1677,15 +1695,15 @@ h6 {
     }
 }
 
-@supports (font-size: clamp( 2.1875rem , 1.7479395604rem  +  2.1978021978vw , 3.4375rem )) {
+@supports (font-size: clamp( 1.875rem , 1.3255494505rem  +  2.7472527473vw , 3.4375rem )) {
     .body-discount__title {
-      font-size: clamp( 2.1875rem , 1.7479395604rem  +  2.1978021978vw , 3.4375rem );
+      font-size: clamp( 1.875rem , 1.3255494505rem  +  2.7472527473vw , 3.4375rem );
     }
 }
 
-@supports not (font-size: clamp( 2.1875rem , 1.7479395604rem  +  2.1978021978vw , 3.4375rem )) {
+@supports not (font-size: clamp( 1.875rem , 1.3255494505rem  +  2.7472527473vw , 3.4375rem )) {
     .body-discount__title {
-      font-size: calc(2.1875rem + 1.25 * (100vw - 20rem) / 56.875);
+      font-size: calc(1.875rem + 1.5625 * (100vw - 20rem) / 56.875);
     }
 }
 
@@ -1698,6 +1716,18 @@ h6 {
 @supports not (padding-bottom: clamp( 0.9375rem , 0.5638736264rem  +  1.8681318681vw , 2rem )) {
     .body-discount__title:not(:last-child) {
       padding-bottom: calc(0.9375rem + 1.0625 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.1181318681rem  +  0.6593406593vw , 1.625rem )) {
+    .body-discount__text {
+      font-size: clamp( 1.25rem , 1.1181318681rem  +  0.6593406593vw , 1.625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.1181318681rem  +  0.6593406593vw , 1.625rem )) {
+    .body-discount__text {
+      font-size: calc(1.25rem + 0.375 * (100vw - 20rem) / 56.875);
     }
 }
 
